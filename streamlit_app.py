@@ -20,4 +20,4 @@ fruits_selected = sl.multiselect("Pick some fruits:", list(my_fruit_list.index),
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Display Table on the Page
-sl.dataframe(fruites_to_show)
+sl.dataframe(fruits_to_show)
