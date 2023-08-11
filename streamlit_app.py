@@ -22,10 +22,13 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display Table on the Page
 sl.dataframe(fruits_to_show)
 
+# New section to display Fruityvice advice
 sl.header("Fruityvice Fruit Advice!")
+fruit_choice = sl.text_input('What fruit would you like information about?', 'kiwi')
+sl.write ('The Entered Choice is' + fruit_choice)
 
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 #sl.text(fruityvice_response.json())
 
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
