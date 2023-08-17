@@ -1,1 +1,1 @@
-$pip install urllib3==1.26.16
+conda install urllib3==1.26.16
